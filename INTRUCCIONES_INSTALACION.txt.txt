@@ -1,0 +1,72 @@
+==============================================================================
+GUÍA DE INSTALACIÓN: MARKETPLACE ARTESANÍA (Full Stack)
+==============================================================================
+
+Hola compañero, para que el proyecto funcione en tu computador, sigue estos pasos EXACTOS.
+No te saltes ninguno.
+
+REQUISITOS PREVIOS (Instala esto si no lo tienes):
+1. Python (versión 3.10 o superior): https://www.python.org/downloads/
+   (¡OJO! Al instalar, marca la casilla "Add Python to PATH")
+2. Node.js (versión LTS): https://nodejs.org/es
+3. Git
+
+==============================================================================
+PASO 1: PREPARAR EL BACKEND (PYTHON)
+==============================================================================
+
+1. Abre una terminal (PowerShell o CMD) en la carpeta del proyecto.
+2. Entra a la carpeta backend:
+   cd backend
+
+3. Crea el entorno virtual (el "motor" aislado):
+   python -m venv venv
+
+4. Activa el entorno:
+   .\venv\Scripts\activate
+   (Deberías ver un (venv) verde al inicio de la línea. Si falla, avísame).
+
+5. Instala las librerías necesarias:
+   pip install fastapi uvicorn sqlalchemy psycopg2-binary python-dotenv
+
+6. ¡MUY IMPORTANTE! CONFIGURACIÓN DE BASE DE DATOS
+   Dentro de la carpeta "backend", crea un archivo nuevo llamado ".env" (sin comillas, empieza con punto).
+   Abre ese archivo con el Bloc de Notas y pega esto adentro tal cual:
+
+   DB_USER=postgres.beveetgzdzbekzztlnxx
+   DB_PASSWORD=Artesania2025
+   DB_HOST=aws-1-sa-east-1.pooler.supabase.com
+   DB_PORT=6543
+   DB_NAME=postgres
+
+   (Guarda el archivo y ciérralo).
+
+==============================================================================
+PASO 2: PREPARAR EL FRONTEND (REACT)
+==============================================================================
+
+1. Abre otra terminal (o usa la misma si ya terminaste lo anterior) y ve a la carpeta frontend:
+   cd ..
+   cd frontend
+
+2. Instala las librerías de React (esto tardará un poco):
+   npm install
+
+==============================================================================
+PASO 3: ¡A TRABAJAR!
+==============================================================================
+
+Si hiciste todo lo anterior UNA sola vez, ya estás listo para siempre.
+
+Para iniciar el proyecto cada día:
+1. Ve a la carpeta principal.
+2. Dale DOBLE CLIC al archivo "INICIAR_TODO.bat".
+   (Se abrirán dos ventanas negras automáticamente).
+
+3. Abre tu navegador en: http://localhost:5173
+
+==============================================================================
+NOTAS:
+- Si el .bat no funciona, ábrelo, dale a "Guardar como" y asegúrate de elegir "Todos los archivos" y ponerle extensión .bat
+- La base de datos está en la nube (Supabase), así que lo que borres o crees, lo veremos ambos.
+==============================================================================
